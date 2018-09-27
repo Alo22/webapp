@@ -1,13 +1,12 @@
 require 'sinatra'
-
 set :bind, '0.0.0.0'
 
 get '/' do
   @titulo="Página de inicio"
-   erb :home //vista
+   erb :home #vista
 end
 get '/contacto' do
-  @titulo="Pagina de contacto"
+  @titulo="Página de contacto"
   erb :contacto
 end
 
@@ -31,7 +30,7 @@ __END__
 </head>
 <body>
 <header>
-<h1> ejemplo 2 sinatra</h1>
+<h1> Ejemplo 2 Sinatra</h1>
 </header>
 <section>
 <%=yield%>
