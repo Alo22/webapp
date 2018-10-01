@@ -1,0 +1,3 @@
+@@acercade
+<h2><%=@titulo%></h2> 
+<p>Esta aplicacion está desarrollado con sinatra</p>

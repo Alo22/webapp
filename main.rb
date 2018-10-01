@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
+
 set :bind, '0.0.0.0'
 
 get '/' do
@@ -9,42 +11,15 @@ get '/contacto' do
   @titulo="Página de contacto"
   erb :contacto
 end
-
 get '/acercade' do
   @titulo="Página de informacion de la app."
   erb :acercade
 end
-
-__END__
-@@layout
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title> Ejemplo 2</title>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/contacto">Contacto</a></li>
-<li><a href="/acercade">Acerca de la aplicacion</a></li>
-</ul>
-</head>
-<body>
-<header>
-<h1> Ejemplo 2 Sinatra</h1>
-</header>
-<section>
-<%=yield%>
-</section>
-<footer>
-</footer>
-</body>
-</html>
-@@home
-<h2><%=@titulo%></h2>
-<p>En la pagina de inicio...</p>
-@@contacto
-<h2><%=@titulo%></h2> 
-<p>Si quieres mandar correo</p>
-@@acercade
-<h2><%=@titulo%></h2> 
-<p>Esta aplicacion está desarrollado con sinatra</p>
+get '/clientes' do
+   @clientes=(1..30).to_a
+  erb :clientes
+  end
+  
+ not_found do
+ erb :not_found
+ end

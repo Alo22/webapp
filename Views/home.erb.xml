@@ -1,0 +1,3 @@
+@@home
+<h2><%=@titulo%></h2>
+<p>En la pagina de inicio...</p>

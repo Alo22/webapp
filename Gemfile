@@ -5,4 +5,8 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
-gem "sinatra"
+gem 'sinatra'
+gem "sinatra-contrib"
+gem "sqlite3"
+gem "data_mapper" #generar odm,orm
+gem "dm-sqlite-adapter"
